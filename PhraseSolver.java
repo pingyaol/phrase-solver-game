@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class PhraseSolver
 {
   /* your code here - attributes */
-  Player player1; 
-  Player player2; 
-  Board board; 
-  boolean solved; 
+  private Player player1; 
+  private Player player2; 
+  private Board board; 
+  private boolean solved; 
 
   /* your code here - constructor(s) */ 
   public PhraseSolver() {
