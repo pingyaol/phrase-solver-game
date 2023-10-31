@@ -12,17 +12,13 @@ public class  Board
   private String phrase;
   private int currentLetterValue; 
 
-  /* your code here - constructor(s) */ 
+  // constructor that sets the initial values of the instance variables 
   public Board() {
     solvedPhrase = ""; 
     phrase = loadPhrase(); 
     currentLetterValue = 0;
     System.out.println("Phrase:" + phrase);
   }
-  
-  /* your code here - accessor(s) */
-  
-  /* your code here - mutator(s)  */
 
 
   /* ---------- provided code, do not modify ---------- */
@@ -91,22 +87,34 @@ public class  Board
 
   public boolean guessLetter(String guess)
   {
+    /* Preconditions 
+     * guess is an actual letter 
+     * solvedPhrase has underscores in the right places 
+     * Postconditions 
+     * foundLetter is true 
+     * solvedPhrase has the letters guessed along with the underscores for other places 
+     */
+
+    // initial values of variables 
+    // foundLetter is false beause the right letter has not been found 
+    // newSolvedPhrase is empty because nothing has been guessed yet 
     boolean foundLetter = false;
     String newSolvedPhrase = "";
     
+    // for each letter in the chosen phrase, check if any letter is equivalent to the guess 
     for (int i = 0; i < phrase.length(); i++)
     {
-      if (phrase.substring(i, i + 1).equals(guess))
+      if (phrase.substring(i, i + 1).equals(guess)) // if the letters are equal, add it to the newSolvedPhrase
       {
         newSolvedPhrase += guess + " ";
         foundLetter = true;
       }
       else
       {
-        newSolvedPhrase += solvedPhrase.substring(i * 2, i * 2 + 1) + " ";  
+        newSolvedPhrase += solvedPhrase.substring(i * 2, i * 2 + 1) + " ";  // if not, copy the underscores 
       }
     }
-    solvedPhrase = newSolvedPhrase;
-    return foundLetter;
+    solvedPhrase = newSolvedPhrase; // set new value of solvedPhrase 
+    return foundLetter; // return the boolean value 
   } 
 } 
