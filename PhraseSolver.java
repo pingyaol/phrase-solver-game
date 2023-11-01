@@ -34,6 +34,8 @@ public class PhraseSolver
       String guess = input.nextLine(); 
       /* your code here - game logic */
       solved = board.guessLetter(guess); 
+      System.out.println(player1.getName()); 
+      System.out.println("Here is how much of the word you have guessed: " + board.getPhrase()); 
     } 
    
   }

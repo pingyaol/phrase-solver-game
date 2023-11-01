@@ -20,6 +20,10 @@ public class  Board
     System.out.println("Phrase:" + phrase);
   }
 
+  public String getPhrase() {
+    return phrase; 
+  }
+
 
   /* ---------- provided code, do not modify ---------- */
   public void setLetterValue()
