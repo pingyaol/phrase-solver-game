@@ -36,6 +36,8 @@ public class PhraseSolver
       solved = board.guessLetter(guess); 
       System.out.println(player1.getName()); 
       System.out.println("Here is how much of the word you have guessed: " + board.getPhrase()); 
+      System.out.println ("Points Player 1: " + player1.getPoints());
+      System.out.println ("Points Player 2: " + player1.getPoints());
     } 
    
   }
