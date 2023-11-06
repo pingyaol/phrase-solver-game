@@ -17,11 +17,13 @@ public class  Board
     solvedPhrase = ""; 
     phrase = loadPhrase(); 
     currentLetterValue = 0;
-    System.out.println("Phrase:" + phrase);
   }
 
   public String getPhrase() {
     return phrase; 
+  }
+  public String getSolvedPhrase(){
+    return solvedPhrase;
   }
 
 
@@ -84,7 +86,6 @@ public class  Board
         solvedPhrase += "_ ";
       }
     }  
-    System.out.println("Phrase: " + phrase); // remove later!! 
 
     return tempPhrase;
   }  

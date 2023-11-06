@@ -40,7 +40,10 @@ public class Player
  {
    name = x;
  }
-  
-  
+  public void setPoints(double i)
+  {
+    points+=i;
+  }  
+    
 } 
 
